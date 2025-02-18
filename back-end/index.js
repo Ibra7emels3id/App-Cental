@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const port = 9000;
+const port = process.env.PORT || 9000 ;
 require('dotenv').config();
 const cors = require('cors');
 const connectDB = require('./db/ConnectDB');
@@ -12,7 +12,7 @@ const AllOrder = require('./routes/OrderRouter');
 const AllReview = require('./routes/ReviewRouter');
 
 // cors
-const whitelist = ['https://cental-front-end.vercel.app'];
+const whitelist = ['https://cental-front-end.vercel.app' , 'http://localhost:3000'];
 app.use(cors({
     origin: 'https://cental-front-end.vercel.app',
     optionsSuccessStatus: 200,
