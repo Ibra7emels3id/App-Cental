@@ -27,7 +27,7 @@ const CommentReview = () => {
         >
             {Reviews.map((it) => {
                 return (
-                    <SwiperSlide className='cursor-pointer m-auto'>
+                    <SwiperSlide key={it._id} className='cursor-pointer m-auto'>
                         <div className="max-w-xl mx-auto">
                             <div className="flex flex-col items-center text-center">
                                 <img
