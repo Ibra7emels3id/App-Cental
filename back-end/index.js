@@ -14,7 +14,7 @@ const AllReview = require('./routes/ReviewRouter');
 // cors
 const whitelist = ['https://cental-front-end.vercel.app' , 'http://localhost:3000'];
 app.use(cors({
-    origin: 'https://cental-front-end.vercel.app',
+    origin: whitelist,
     optionsSuccessStatus: 200,
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With', 'Origin', 'Accept', 'X-Custom-Header'],
