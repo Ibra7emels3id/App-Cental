@@ -37,9 +37,9 @@ const FormTable = () => {
     const handleUpdateOrderStatus = async (id, status) => {
         try {
             const res = await axios.put(`${process.env.NEXT_PUBLIC_SERVER}/api/order/status/${id}`, { status })
+            getAllOrders()
             // console.log(res);
             if (res.statusText) {
-                getAllOrders()
                 handleShowMenu(id)
             }
         } catch (error) {
@@ -269,7 +269,7 @@ const FormTable = () => {
                                                     </>}
                                                 </ul>
                                             </div>
-    
+
                                         </td>
                                         <td className="py-4 text-left text-sm font-medium text-white"><Link href={`/admin/orders/edit/${product._id}`} className='flex justify-center text-start bg-yellow-500 w-[100px] m-auto py-3 rounded hover:bg-yellow-700'>Edit</Link></td>
                                         <td className="p-4 text-left text-sm font-medium text-white"><button onClick={() => {
@@ -284,7 +284,7 @@ const FormTable = () => {
                 <Dialog showDialog={showDialog} HandleShowDialog={HandleShowDialog} productId={productId} />
             </div>
         );
-    } else{
+    } else {
         return <h2>No orders found</h2>;
     }
 }
