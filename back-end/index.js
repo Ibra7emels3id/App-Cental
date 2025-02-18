@@ -12,7 +12,7 @@ const AllOrder = require('./routes/OrderRouter');
 const AllReview = require('./routes/ReviewRouter');
 
 // cors
-const whitelist = ['http://localhost:3000', 'http://localhost:5000'];
+const whitelist = ['http://localhost:3000', 'https://cental-front-end.vercel.app'];
 app.use(cors({
     origin: whitelist,
     optionsSuccessStatus: 200,
