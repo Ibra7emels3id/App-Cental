@@ -1,0 +1,108 @@
+<div className="font-sans overflow-x-auto ">
+            <div className="flex justify-end">
+                <Link href={'/admin/car-list/add-car'} className=' text-center py-3 mb-2 text-white rounded'>
+                    <svg viewBox="0 0 24 24" className='w-12 mr-4 m-auto hover:file:bg-red-700' fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g id="SVGRepo_bgCarrier" strokeWidth={0} />
+                        <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round" />
+                        <g id="SVGRepo_iconCarrier">
+                            {" "}
+                            <path
+                                fillRule="evenodd"
+                                clipRule="evenodd"
+                                d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22ZM12.75 9C12.75 8.58579 12.4142 8.25 12 8.25C11.5858 8.25 11.25 8.58579 11.25 9L11.25 11.25H9C8.58579 11.25 8.25 11.5858 8.25 12C8.25 12.4142 8.58579 12.75 9 12.75H11.25V15C11.25 15.4142 11.5858 15.75 12 15.75C12.4142 15.75 12.75 15.4142 12.75 15L12.75 12.75H15C15.4142 12.75 15.75 12.4142 15.75 12C15.75 11.5858 15.4142 11.25 15 11.25H12.75V9Z"
+                                fill="#ba2121"
+                            />{" "}
+                        </g>
+                    </svg>
+                </Link>
+            </div>
+            <table className="min-w-full bg-white">
+                <thead className="bg-gray-700 ">
+                    <tr>
+                        <th className="pl-4 w-8">
+                            <input id="checkbox" type="checkbox" className="hidden peer" />
+                            <label
+                                htmlFor="checkbox"
+                                className="relative flex items-center justify-center p-0.5 peer-checked:before:hidden before:block before:absolute before:w-full before:h-full before:bg-white w-5 h-5 cursor-pointer bg-blue-500 border border-gray-400 rounded overflow-hidden"
+                            >
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    className="w-full fill-white"
+                                    viewBox="0 0 520 520"
+                                >
+                                    <path
+                                        d="M79.423 240.755a47.529 47.529 0 0 0-36.737 77.522l120.73 147.894a43.136 43.136 0 0 0 36.066 16.009c14.654-.787 27.884-8.626 36.319-21.515L486.588 56.773a6.13 6.13 0 0 1 .128-.2c2.353-3.613 1.59-10.773-3.267-15.271a13.321 13.321 0 0 0-19.362 1.343q-.135.166-.278.327L210.887 328.736a10.961 10.961 0 0 1-15.585.843l-83.94-76.386a47.319 47.319 0 0 0-31.939-12.438z"
+                                        data-name="7-Check"
+                                        data-original="#000000"
+                                    />
+                                </svg>
+                            </label>
+                        </th>
+                        <th className="p-4 text-left text-sm font-medium text-white">Image</th>
+                        <th className="p-4 text-left text-sm font-medium text-white">Name</th>
+                        <th className="p-4 text-left text-sm font-medium text-white">Description</th>
+                        <th className="p-4 text-left text-sm font-medium text-white">Model</th>
+                        <th className="p-4 text-left text-sm font-medium text-white">
+                            Status
+                        </th>
+                        <th className="p-4 text-left text-sm font-medium text-white">
+                            Price
+                        </th>
+                        <th className="p-4 text-left text-sm font-medium text-white">Rating</th>
+                        <th className="p-4 text-left text-sm font-medium text-white">Edit</th>
+                        <th className="p-4 text-left text-sm font-medium text-white">Delete</th>
+                    </tr>
+                </thead>
+                <tbody className="">
+                    {
+                        products.map((product, index) => {
+                            return (
+                                <tr key={index} className="even:bg-blue-50">
+                                    <td className="pl-4 w-8">
+                                        <input id="checkbox1" type="checkbox" className="hidden peer" />
+                                        <label
+                                            htmlFor="checkbox1"
+                                            className="relative flex items-center justify-center p-0.5 peer-checked:before:hidden before:block before:absolute before:w-full before:h-full before:bg-white w-5 h-5 cursor-pointer bg-blue-500 border border-gray-400 rounded overflow-hidden"
+                                        >
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                className="w-full fill-white"
+                                                viewBox="0 0 520 520"
+                                            >
+                                                <path
+                                                    d="M79.423 240.755a47.529 47.529 0 0 0-36.737 77.522l120.73 147.894a43.136 43.136 0 0 0 36.066 16.009c14.654-.787 27.884-8.626 36.319-21.515L486.588 56.773a6.13 6.13 0 0 1 .128-.2c2.353-3.613 1.59-10.773-3.267-15.271a13.321 13.321 0 0 0-19.362 1.343q-.135.166-.278.327L210.887 328.736a10.961 10.961 0 0 1-15.585.843l-83.94-76.386a47.319 47.319 0 0 0-31.939-12.438z"
+                                                    data-name="7-Check"
+                                                    data-original="#000000"
+                                                />
+                                            </svg>
+                                        </label>
+                                    </td>
+                                    <td className="p-4 text-sm text-black">
+                                        <Image
+                                            className="w-[100px] h-[100px] object-cover rounded-full"
+                                            src={product.image}
+                                            alt="Product"
+                                            width={100}
+                                            height={100}
+                                        />
+                                    </td>
+                                    <td className="p-4 text-sm text-black">{product.title}</td>
+                                    <td className="p-4 text-sm text-black">{product.description.slice(0, 30)}...</td>
+                                    <td className="p-4 text-sm text-black">{product.model}</td>
+                                    <td className="p-4 text-sm text-black">{product.status}</td>
+                                    <td className="p-4 text-sm text-black">{product.daily_price}$</td>
+                                    <td className="p-4">
+                                        <Rating className='my-2' name="size-medium" defaultValue={product.rating} readOnly />
+                                    </td>
+                                    <td className="p-4 text-left text-sm font-medium text-white"><Link href={`/admin/car-list/edit/${product._id}`} className='flex justify-center bg-yellow-500 w-[100px] m-auto py-3 rounded hover:bg-yellow-700'>Edit</Link></td>
+                                    <td className="p-4 text-left text-sm font-medium text-white"><button onClick={() => {
+                                        HandleShowDialog(product._id)
+                                    }} className='bg-color_red w-[100px] py-3 rounded hover:bg-red-700'>Delete</button></td>
+                                </tr>
+                            )
+                        })
+                    }
+                </tbody>
+            </table>
+            <Dialog showDialog={showDialog} HandleShowDialog={HandleShowDialog} productId={productId} />
+        </div>
