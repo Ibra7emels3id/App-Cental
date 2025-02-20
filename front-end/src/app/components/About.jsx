@@ -69,7 +69,7 @@ const About = () => {
                         width={1200}
                         height={600}
                         src="https://readymadeui.com/photo.webp"
-                        className="rounded-md lg:w-3/4 md:w-11/12 z-50 relative"
+                        className="rounded-md lg:w-3/4 md:w-11/12  relative"
                         alt="Dining Experience"
                     />
                 </div>

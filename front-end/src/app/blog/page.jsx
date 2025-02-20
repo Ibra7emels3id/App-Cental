@@ -1,12 +1,9 @@
 import React from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import About from '../components/About';
 import StatsSection from '../components/StatsSection';
-import Features from '../components/Features';
-import CentalProcess from '../components/CentalProcess';
-import Team from '../components/Team';
 import Contact from '../components/Contact';
+import BLog from '../components/BLog';
 
 const Page = () => {
     return (
@@ -21,17 +18,14 @@ const Page = () => {
                 alignItems: 'center'
             }} className="flex flex-col relative  bg-Process">
                 <div className="flex flex-col items-center justify-center z-50 gap-5">
-                    <h2 className="text-white text-3xl md:text-6xl font-bold">About Us</h2>
+                    <h2 className="text-white text-3xl md:text-6xl font-bold">Our Blog & News</h2>
                     <p className="text-white text-lg">
-                        Home <span className='text-zinc-500 font-bold'>/</span> About
+                        Home <span className='text-zinc-500 font-bold'>/</span> Blog & News
                     </p>
                 </div>
             </div>
-            <About />
+            <BLog />
             <StatsSection />
-            <Features />
-            <CentalProcess />
-            <Team />
             <Contact />
             <Footer />
         </>

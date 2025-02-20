@@ -38,7 +38,6 @@ const FormTable = () => {
         try {
             const res = await axios.put(`${process.env.NEXT_PUBLIC_SERVER}/api/order/status/${id}`, { status })
             getAllOrders()
-            console.log(res.statusText);
             handleShowMenu(id)
         } catch (error) {
             console.error('Error updating order status:', error);

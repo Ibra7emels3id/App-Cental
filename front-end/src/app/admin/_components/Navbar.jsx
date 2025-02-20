@@ -6,6 +6,7 @@ import React, { useState } from 'react';
 const Navbar = () => {
     const [showNavbar, setShowNavbar] = useState('hidden');
 
+    // Handle Check Nav Bar
     const HandleCheckNavbar = () => {
         if (showNavbar === 'flex') {
             setShowNavbar('hidden');
@@ -183,7 +184,7 @@ const Navbar = () => {
                                     <span>User</span>
                                 </Link>
                             </li>
-                            <li>
+                            {/* <li>
                                 <a
                                     href="javascript:void(0)"
                                     className="menu-item text-gray-800 text-sm flex items-center cursor-pointer hover:bg-[#d9f3ea] rounded-md px-3 py-3 transition-all duration-300"
@@ -250,10 +251,10 @@ const Navbar = () => {
                                     </svg>
                                     <span>Preferences</span>
                                 </a>
-                            </li>
+                            </li> */}
 
                         </ul>
-                        <div className="mt-8">
+                        {/* <div className="mt-8">
                             <div className="bg-[#00b074] p-4 rounded-md shadow-md max-w-[196px]">
                                 <p className="text-white text-sm leading-relaxed">
                                     Organize your menus using the action button below!
@@ -265,7 +266,7 @@ const Navbar = () => {
                                     Add Menu
                                 </button>
                             </div>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </nav>

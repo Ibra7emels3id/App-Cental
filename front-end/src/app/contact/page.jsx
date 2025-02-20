@@ -6,7 +6,8 @@ import StatsSection from '../components/StatsSection';
 import Features from '../components/Features';
 import CentalProcess from '../components/CentalProcess';
 import Team from '../components/Team';
-import Contact from '../components/Contact';
+import Contact from './components/Contact';
+import Location from './components/Location';
 
 const Page = () => {
     return (
@@ -15,24 +16,20 @@ const Page = () => {
             <div style={{
                 backgroundImage: 'url(/image/fact-bg.jpg)',
                 backgroundSize: 'cover',
-                height: '60vh',
+                height: '50vh',
                 display: 'flex',
                 justifyContent: 'center',
                 alignItems: 'center'
             }} className="flex flex-col relative  bg-Process">
                 <div className="flex flex-col items-center justify-center z-50 gap-5">
-                    <h2 className="text-white text-3xl md:text-6xl font-bold">About Us</h2>
+                    <h2 className="text-white text-3xl md:text-6xl font-bold">Contact Us</h2>
                     <p className="text-white text-lg">
-                        Home <span className='text-zinc-500 font-bold'>/</span> About
+                        Home <span className='text-zinc-500 font-bold'>/</span> Contact
                     </p>
                 </div>
             </div>
-            <About />
-            <StatsSection />
-            <Features />
-            <CentalProcess />
-            <Team />
             <Contact />
+            <Location />
             <Footer />
         </>
     );

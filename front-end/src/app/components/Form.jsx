@@ -14,6 +14,8 @@ const Form = () => {
     const Router = useRouter();
 
 
+    // console.log(category);
+
 
     // Handle Change events
     const handleChange = (e) => {
@@ -47,7 +49,7 @@ const Form = () => {
                     <div className='form-group'>
                         <select onChange={handleChange} className='w-full h-10 border-none focus:border-none outline-none focus:outline-none rounded px-2' name="nameCar" id="nameCar">
                             <option hidden>Select Your Car type</option>
-                            {category.map((it) => {
+                            {category?.map((it) => {
                                 return <option key={it._id} value={it.name}>{it.name}</option>
                             })}
                         </select>

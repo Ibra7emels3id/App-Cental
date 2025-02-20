@@ -19,7 +19,7 @@ export const AuthProviderContext = ({ children }) => {
     // Get all products
     const getAllProducts = async () => {
         try {
-            const response = await axios.get(`https://app-cental-server.onrender.com/api/product`);
+            const response = await axios.get(`${process.env.NEXT_PUBLIC_SERVER}/api/product`);
             setProducts(response.data.products);
         } catch (error) {
             console.error("Error fetching products:", error);
@@ -80,7 +80,7 @@ export const AuthProviderContext = ({ children }) => {
         }
     };
 
-    // Get all Users
+    // Get all User
     const getAllUser = async () => {
         try {
             const response = await axios.get(`/api/user/${user?.user?.id}`);

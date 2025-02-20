@@ -1,12 +1,25 @@
 'use client'
 import { useAuth } from '@/app/context/context';
 import Link from 'next/link';
-import React from 'react';
+import React, { useCallback, useState } from 'react';
+import Dialog from './Dialog';
 
 const FormTable = () => {
+    const [productId, setProductId] = useState('')
+    const [showDialog, setShowDialog] = useState(false)
     const { Users } = useAuth()
 
-    console.log(Users);
+
+        const HandleShowDialog = useCallback((id) => {
+            if (showDialog) {
+                setShowDialog(false)
+                setProductId('')
+            } else {
+                setProductId(id)
+                setShowDialog(true)
+            }
+        }, [showDialog])
+
 
     return (
         <div className="font-sans overflow-x-auto">
@@ -32,7 +45,7 @@ const FormTable = () => {
                 </thead>
                 <tbody className="whitespace-nowrap">
                     {Users?.map((user) => (
-                        <tr key={user._id} className="hover:bg-gray-50">
+                        <tr key={user.id} className="hover:bg-gray-50">
                             <td className="p-4 text-[15px] text-gray-800">{user.name}</td>
                             <td className="p-4 text-[15px] text-gray-800">{user.email}</td>
                             <td className="p-4 text-[15px] text-gray-800">{user.role}</td>
@@ -56,7 +69,9 @@ const FormTable = () => {
                                         </svg>
                                     </Link>
                                 </button>
-                                <button className="mr-4" title="Delete">
+                                <button onClick={()=>{
+                                    HandleShowDialog(user.id)
+                                }} className="mr-4" title="Delete">
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
                                         className="w-5 fill-red-500 hover:fill-red-700"
@@ -77,6 +92,7 @@ const FormTable = () => {
                     ))}
                 </tbody>
             </table>
+            <Dialog HandleShowDialog={HandleShowDialog} productId={productId} showDialog={showDialog} />
         </div>
     );
 }
