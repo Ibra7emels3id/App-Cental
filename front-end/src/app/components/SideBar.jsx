@@ -149,7 +149,7 @@ const SideBar = ({ showSidebar, handleToggle }) => {
                     </Link>
                 </li>
             </ul>
-            {user ? <BtnAccountSidebar /> : <Link href={'/sign-in'} className='w-full flex items-center justify-center bg-red-500 py-2 text-white text-lg rounded-lg'>
+            {user ? <BtnAccountSidebar /> : <Link href={'/sign-in'} className='w-[80%] m-auto flex absolute bottom-16 left-5 items-center justify-center bg-red-500 py-2 text-white text-lg rounded-lg'>
                 sign in
             </Link>}
         </nav>
