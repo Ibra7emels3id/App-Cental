@@ -38,7 +38,7 @@ const SideBar = ({ showSidebar, handleToggle }) => {
                     Cental
                 </h1>
             </Link>
-            <ul className="space-y-3 flex-1 mt-10">
+            <ul className="space-y-3  mt-10">
                 <li>
                     <Link
                         href="/"
