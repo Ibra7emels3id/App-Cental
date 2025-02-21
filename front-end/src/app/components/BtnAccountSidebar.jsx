@@ -12,11 +12,11 @@ const BtnAccountSidebar = () => {
 
 
     return (
-        <ul className="space-y-3 absolute bottom-20 left-3">
+        <ul className="space-y-3 absolute bottom-20 left-3 w-[80%]">
             <li>
                 <Link
                     href="/order"
-                    className="text-black hover:text-[#077fbb] text-xl flex items-center hover:bg-gray-200 rounded px-4 py-3 transition-all"
+                    className="text-black w-full hover:text-[#077fbb] text-xl flex items-center hover:bg-gray-200 rounded px-4 py-3 transition-all"
                 >
                     <svg
                         width="20px"
