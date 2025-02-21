@@ -12,7 +12,7 @@ const BtnAccountSidebar = () => {
 
 
     return (
-        <ul className="space-y-3 mt-3">
+        <ul className="space-y-3 -mt-10">
             <li>
                 <Link
                     href="/profile"
