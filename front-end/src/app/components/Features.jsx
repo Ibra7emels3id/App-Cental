@@ -2,9 +2,10 @@ import Image from 'next/image';
 import React from 'react';
 
 const Features = () => {
+
     return (
-        <div className="bg-background_box">
-            <div className='flex flex-col py-10 w-[95%] sm:w-[85%] lg:w-[95%] 2xl:w-[85%] m-auto'>
+        <div className="bg-background_box ">
+            <div className='flex flex-col py-10 w-[95%] sm:w-[85%] lg:w-[95%] 2xl:w-[85%] m-auto animate-fadeIn'>
                 <div className="flex flex-col items-center justify-center md:w-[60%] m-auto my-10 gap-3">
                     <h3 className='text-4xl font-extrabold '>Cental <span className='text-color_red'>Features</span></h3>
                     <p className='text-center text-zinc-600'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut amet nemo expedita asperiores commodi accusantium at cum harum, excepturi, quia tempora cupiditate! Adipisci facilis modi quisquam quia distinctio,</p>

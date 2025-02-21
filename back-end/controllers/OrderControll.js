@@ -2,7 +2,6 @@ const Order = require("../models/order");
 
 // Add To Order 
 const AddOrderClient = async (req, res , next) => {
-    console.log(req.body);
     try {
         const newOrder = new Order(req.body)
         await newOrder.save();

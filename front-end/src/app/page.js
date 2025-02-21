@@ -1,6 +1,7 @@
 import { getServerSession } from "next-auth";
 import { authOptions } from "./api/auth/[...nextauth]/route";
 import { lazy, Suspense } from "react";
+import Loading from "./components/Loading";
 
 const Home = async () => {
     const session = await getServerSession(authOptions);
@@ -24,7 +25,7 @@ const Home = async () => {
 
     return (
         <>
-            <Suspense fallback={<h3>Loading...</h3>}>
+            <Suspense fallback={<Loading />}>
                 <Header />
                 <MainHeader />
                 <Features />

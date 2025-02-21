@@ -13,10 +13,6 @@ const Form = () => {
     const { category, getAllOrder } = useAuth()
     const Router = useRouter();
 
-
-    // console.log(category);
-
-
     // Handle Change events
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -42,7 +38,7 @@ const Form = () => {
 
 
     return (
-        <div className='bg-background_light w-[600px] p-5'>
+        <div className='bg-background_light w-[600px] p-5 animate-fadeLeft'>
             <h3 className='text-center text-white font-bold text-2xl 2lg:text-3xl capitalize mb-5 mt-4'>CONTINUE CAR RESERVATION</h3>
             <div className="form">
                 <form onSubmit={HandelSubmitData} className='flex flex-col gap-4'>
